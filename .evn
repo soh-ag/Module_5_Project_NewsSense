@@ -1,0 +1,3 @@
+API_KEY = "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"
+BASE_URL = "https://models.github.ai/inference"
+MODEL_NAME = "openai/gpt-4.1-nano"
