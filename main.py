@@ -1,13 +1,19 @@
-import os
-import json
-import asyncio
-from datetime import datetime
-from typing import List, Optional
-from dataclasses import dataclass
-from pydantic import BaseModel, Field
-from dotenv import load_dotenv
-from openai import AsyncOpenAI
-from agents import Agent, OpenAIChatCompletionsModel, Runner, function_tool, set_tracing_disabled, ModelSettings, InputGuardrail, GuardrailFunctionOutput, InputGuardrailTripwireTriggered,RunContextWrapper
-import logfire
+from agents.conversation import ConversationAgent
 
 
+def main():
+    agent = ConversationAgent()
+
+    while True:
+        user_input = input("🧠 You: ")
+
+        if user_input.lower() in {"exit", "quit"}:
+            print("👋 Goodbye!")
+            break
+
+        response = agent.handle(user_input)
+        print("🤖 NewsSense:", response)
+
+
+if __name__ == "__main__":
+    main()
