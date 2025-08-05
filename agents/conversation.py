@@ -1,5 +1,9 @@
+from agents.trending import TrendingNewsAgent
+
+
 class ConversationAgent:
     def __init__(self):
+        self.trending_agent = TrendingNewsAgent()
         pass  # future logging/setup
 
     def handle(self, user_input: str) -> str:
@@ -27,7 +31,9 @@ class ConversationAgent:
             return "unknown"
 
     def get_trending_news(self) -> str:
-        return "[Trending] 📰 AI is disrupting the financial world."
+            # Future: pass topic from user input
+        results = self.trending_agent.get_trending_news("AI")
+        return "\n".join(results)
 
     def verify_claim(self) -> str:
         return "[Fact Check] ❌ No official source confirms this claim."
