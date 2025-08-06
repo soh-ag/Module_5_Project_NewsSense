@@ -4,8 +4,8 @@ from models.summarizer import SummarizerInput, SummarizerOutput
 
 
 class NewsSummarizerAgent:
-    def __init__(self, summarizer):
-        self.summarizer = summarizer
+    def __init__(self):
+        self.summarizer = LocalSummarizationTool()
 
     @logfire.instrument()
     def summarize_news(self, article_text: str) -> str:

@@ -4,8 +4,8 @@ from tools.web_search import WebSearchTool
 from models.trending import TrendingNewsInput, TrendingNewsOutput
 
 class TrendingNewsAgent:
-    def __init__(self, search_tool):
-        self.search_tool = search_tool
+    def __init__(self):
+        self.search_tool = WebSearchTool()
 
     @logfire.instrument()
     def get_trending_news(self, topic: str = "general") -> list[str]:

@@ -4,8 +4,8 @@ from models.fact_checker import FactCheckInput, FactCheckOutput
 
 
 class FactCheckerAgent:
-    def __init__(self, rag_tool):
-        self.rag_tool = rag_tool
+    def __init__(self):
+        self.rag_tool = RAGTool()
 
     @logfire.instrument()
     def verify_claim(self, claim: str) -> str:

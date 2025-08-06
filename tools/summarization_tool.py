@@ -2,7 +2,7 @@ from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lsa import LsaSummarizer
 import nltk
-nltk.data.path.append("C:/Users/Sohag/nltk_data/tokenizers")
+nltk.data.path.append("C:/Users/Sohag/nltk_data/tokenizers/punkt")
 
 
 class LocalSummarizationTool:
