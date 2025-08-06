@@ -20,7 +20,7 @@ class RAGTool:
                 "Bloomberg: Sources hint at potential AI collaboration."
             ]
             conclusion = "🤔 Inconclusive. No official confirmation available."
-        elif "earth is flat" in claim:
+        elif any(kw in claim for kw in ["earth is flat", "is earth flat", "flat earth"]):
             sources = [
                 "NASA: Earth is an oblate spheroid.",
                 "Scientific American: Thousands of years of evidence support spherical Earth."
