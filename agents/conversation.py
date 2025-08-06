@@ -6,10 +6,10 @@ import logfire
 
 
 class ConversationAgent:
-    def __init__(self, trending_agent, fact_checker, summarizer_agent):
-        self.trending_agent = trending_agent
-        self.fact_checker = fact_checker
-        self.summarizer_agent = summarizer_agent
+    def __init__(self):
+        self.trending_agent = TrendingNewsAgent()
+        self.fact_checker = FactCheckerAgent()
+        self.summarizer_agent = NewsSummarizerAgent()
 
     @logfire.instrument()
     def handle(self, user_input: str) -> str:

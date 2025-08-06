@@ -8,7 +8,7 @@ if hasattr(sys.stdout, "buffer"):
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 def main():
-    agent = ConversationAgent("trading_agent", "fact_checker", "summarizer_agent")
+    agent = ConversationAgent()
 
     while True:
         user_input = input("🧠 You: ")
