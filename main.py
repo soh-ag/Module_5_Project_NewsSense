@@ -1,5 +1,5 @@
 import logfire_setup
-from agents.conversation import ConversationAgent
+from my_agents.conversation import ConversationAgent
 import sys
 import io
 

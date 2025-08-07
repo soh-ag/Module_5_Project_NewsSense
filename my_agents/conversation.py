@@ -1,8 +1,9 @@
-from agents.trending import TrendingNewsAgent
-from agents.fact_checker import FactCheckerAgent
-from agents.summarizer import NewsSummarizerAgent
+from my_agents.trending import TrendingNewsAgent
+from my_agents.fact_checker import FactCheckerAgent
+from my_agents.summarizer import NewsSummarizerAgent
 from typing import List
 import logfire
+
 
 
 class ConversationAgent:
